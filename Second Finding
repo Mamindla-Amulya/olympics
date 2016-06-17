@@ -1,0 +1,9 @@
+#no of mens and womens particpating in the event
+Gender <- aggregate(medals$Event, list(Gender = medals$Event_gender), length)
+Gender
+ 
+  output:
+    Gender    x
+1      M   1386
+2      W    802
+3      X    123
