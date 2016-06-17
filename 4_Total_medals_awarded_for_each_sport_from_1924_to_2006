@@ -3,7 +3,7 @@ sport <- aggregate(list(no_of_participants = medals$Sport), list(sport = medals$
 sport
 
  out put:
-   sport          no_of_participants
+   sport          medals_awarded_for_each_sport
 1   Biathlon                162
 2  Bobsleigh                133
 3    Curling                 21
