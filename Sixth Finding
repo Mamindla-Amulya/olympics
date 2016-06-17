@@ -1,0 +1,53 @@
+#proportion of gold medals by each country
+NOC50Plus <- names(table(medals$NOC)[table(medals$NOC) > 50])
+NOC50Plus
+
+output:
+
+      "AUT" "CAN" "FIN" "FRA" "GDR" "GER" "ITA" "NED" "NOR" "RUS" "SUI" "SWE" "URS" "USA"
+      
+medalsSubset <- medals[medals$NOC %in% NOC50Plus, ]
+medalsSubset
+medalsByMedalByNOC <- prop.table(table(medalsSubset$NOC, medalsSubset$Medal), margin = 1)
+medalsByMedalByNOC
+
+output:
+
+             
+         Bronze      Gold    Silver
+  AUT 0.3783784 0.2756757 0.3459459
+  CAN 0.3613445 0.3193277 0.3193277
+  FIN 0.3443709 0.2715232 0.3841060
+  FRA 0.4096386 0.3012048 0.2891566
+  GDR 0.3181818 0.3545455 0.3272727
+  GER 0.2594937 0.3670886 0.3734177
+  ITA 0.3366337 0.3564356 0.3069307
+  NED 0.2948718 0.3205128 0.3846154
+  NOR 0.3000000 0.3500000 0.3500000
+  RUS 0.2500000 0.4342105 0.3157895
+  SUI 0.3644068 0.3220339 0.3135593
+  SWE 0.3728814 0.3644068 0.2627119
+  URS 0.3041237 0.4020619 0.2938144
+  USA 0.2685185 0.3611111 0.3703704
+  
+medalsByMedalByNOC <- medalsByMedalByNOC[order(medalsByMedalByNOC[, "Gold"],decreasing = TRUE), c("Gold", "Silver", "Bronze")]
+medalsByMedalByNOC
+round(medalsByMedalByNOC, 2)
+
+output:
+
+           Gold Silver Bronze
+      RUS 0.43   0.32   0.25
+      URS 0.40   0.29   0.30
+      GER 0.37   0.37   0.26
+      SWE 0.36   0.26   0.37
+      USA 0.36   0.37   0.27
+      ITA 0.36   0.31   0.34
+      GDR 0.35   0.33   0.32
+      NOR 0.35   0.35   0.30
+      SUI 0.32   0.31   0.36
+      NED 0.32   0.38   0.29
+      CAN 0.32   0.32   0.36
+      FRA 0.30   0.29   0.41
+      AUT 0.28   0.35   0.38
+      FIN 0.27   0.38   0.34
