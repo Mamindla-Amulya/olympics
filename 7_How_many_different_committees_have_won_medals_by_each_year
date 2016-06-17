@@ -1,4 +1,4 @@
-# How many different countries have won medals by year
+# How many different committes have won medals by year
 listOfYears <- unique(medals$Year)
 listOfYears
 
