@@ -1,0 +1,13 @@
+how many played different kind of sports
+sport <- aggregate(list(no_of_participants = medals$Sport), list(sport = medals$Sport), length)
+sport
+
+ out put:
+   sport          no_of_participants
+1   Biathlon                162
+2  Bobsleigh                133
+3    Curling                 21
+4 Ice Hockey                 69
+5       Luge                108
+6    Skating                758
+7     Skiing               1060
