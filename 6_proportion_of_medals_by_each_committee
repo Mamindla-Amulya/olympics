@@ -1,4 +1,4 @@
-#proportion of gold medals by each country
+#proportion of medals by each committee
 NOC50Plus <- names(table(medals$NOC)[table(medals$NOC) > 50])
 NOC50Plus
 
