@@ -1,0 +1,21 @@
+city <- sort(table(medals$City), dec = TRUE)
+city
+  
+  
+  
+  output:
+     
+                 Turin         Salt Lake City              Innsbruck                 Nagano 
+                   252                    234                    214                    205 
+           Lillehammer            Albertville            Lake Placid                Calgary 
+                   183                    171                    157                    138 
+              Sarajevo             St. Moritz               Grenoble                Sapporo 
+                   117                    109                    106                    105 
+          Squaw Valley      Cortina d'Ampezzo                   Oslo Garmisch-Partenkirchen 
+                    81                     72                     67                     51 
+              Chamonix 
+                    49 
+                    
+ city[city == max(city)]
+      Turin
+       252
