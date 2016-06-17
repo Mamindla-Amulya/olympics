@@ -20,3 +20,18 @@ name
 output:
  
        [1] "AUT" "CAN" "FIN" "NOR" "SWE" "USA"
+
+
+#using ggplot plot the world map
+library(ggplot2)
+mapWorld <- borders("world", colour="grey", fill="lightblue")
+mapWorld
+#Plot of cities which won atleast one medal in every olympics
+ggplot() + mapWorld + geom_point(aes(x=25.74815, y=61.92411) ,color="red", size=3) + geom_text(data=medals, aes(x=25.74815, y=61.92411, label = "Finland"), size=5)
+  + geom_point(aes(x = 1.468091, y = 44.18961) ,color="red", size=3) + geom_text(data=medals, aes(x = 1.468091, y = 44.18961, label = "Austria"), size=5)
+  + geom_point(aes(x = 27.04663, y = 40.02817) ,color="red", size=3) + geom_text(data=medals, aes(x = 27.04663, y= 40.02817, label = "Turkey"), size=5) 
+  + geom_point(aes(x = 8.468946, y = 60.47202) ,color = "red", size = 3) + geom_text(data = medals, aes(x = 8.468946, y = 60.47202, label = "Norway"), size=5) 
+  + geom_point(aes(x = -77.98724, y = 43.14404) ,color="red", size = 3) + geom_text(data = medals, aes(x = -77.98724, y = 43.14404, label = "New York"), size=5)   
+  +  geom_point(aes(x = -95.71289, y = 37.09024) ,color = "red", size = 3)  + geom_text(data = medals, aes(x = -95.71289, y = 37.09024, label = "USA"), size = 5)
+  
+  
