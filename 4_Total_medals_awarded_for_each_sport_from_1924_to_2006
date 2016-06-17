@@ -1,4 +1,4 @@
-how many played different kind of sports
+#how many played different kind of sports
 sport <- aggregate(list(no_of_participants = medals$Sport), list(sport = medals$Sport), length)
 sport
 
