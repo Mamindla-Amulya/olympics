@@ -1,0 +1,22 @@
+# Which Countries have won a medal at every Olympics
+
+propYearsOnePlusMedals <- apply(table(medals$NOC, medals$Year) > 0, 1, mean)
+propYearsOnePlusMedals
+
+output:
+
+      AUS  AUT  BEL  BLR  BUL  CAN  CHN  CRO  CZE  DEN  ESP  EST  EUA  EUN  FIN  FRA  FRG  GBR  GDR  GER  HUN  ITA 
+0.20 1.00 0.20 0.20 0.20 1.00 0.25 0.10 0.15 0.05 0.10 0.10 0.15 0.05 1.00 0.95 0.35 0.65 0.30 0.45 0.30 0.80 
+ JPN  KAZ  KOR  LAT  LIE  LUX  NED  NOR  NZL  POL  PRK  ROU  RUS  SLO  SUI  SVK  SWE  TCH  UKR  URS  USA  UZB 
+0.50 0.10 0.25 0.05 0.20 0.05 0.65 1.00 0.05 0.25 0.10 0.05 0.20 0.10 0.95 0.05 1.00 0.55 0.15 0.45 1.00 0.05 
+ YUG 
+0.10 
+
+
+
+name <- names(propYearsOnePlusMedals[propYearsOnePlusMedals == 1.0])
+name
+
+output:
+ 
+       [1] "AUT" "CAN" "FIN" "NOR" "SWE" "USA"
